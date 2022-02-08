@@ -118,23 +118,13 @@ body {
   transition: 300ms ease-in-out;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
-.testimonial__section {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1440px;
-  padding: 5em 2em;
-  margin: 0em auto;
-  align-items: center;
-}
 .section__heading {
   background: linear-gradient(#1a1a1a, #373737);
   color: white;
-  padding: 1.2em 2em;
+  padding: 1.1em 2em;
   border-radius: 10px;
   margin-bottom: 1.5em;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 .section__info {
@@ -142,8 +132,21 @@ body {
   text-align: center;
   margin-bottom: 2em;
   width: 100%;
+  font-size: 14px;
   max-width: 900px;
 }
+.testimonial__section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0em 2em;
+  margin: 0em auto;
+  margin-bottom: 5em;
+  align-items: center;
+}
+
 .testimonial__section__content {
   width: 100%;
 }
@@ -187,6 +190,52 @@ body {
 .testimonial__card__content__sub__heading {
   font-size: 12px;
 }
+.blog__section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0em 2em;
+  margin: 0em auto;
+  margin-bottom: 5em;
+  align-items: center;
+}
+.blog__section__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.blog__card {
+  width: 32%;
+  border-radius: 20px;
+  background: linear-gradient(#1a1a1a, #373737);
+}
+.blog__card__box {
+  width: 100%;
+  height: fit-content;
+  max-height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.blog__card__box__img {
+  width: 100%;
+}
+.blog__card__content {
+  padding: 1.5em;
+}
+.blog__card__content__heading {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+.blog__card__content__info {
+  font-size: 14px;
+  color: white;
+}
 @media (max-width: 1050px) {
   .header__wrapper__menu {
     display: flex;
@@ -208,6 +257,15 @@ body {
     margin-top: 0.2em;
   }
 }
+@media (max-width: 900px) {
+  .blog__card {
+    width: 48%;
+    margin-bottom: 2em;
+  }
+  .blog__card:last-child {
+    margin-bottom: 0em;
+  }
+}
 
 @media (max-width: 500px) {
   .testimonial__card {
@@ -220,6 +278,9 @@ body {
     max-width: 100%;
   }
   .testimonial__card__box__img {
+    width: 100%;
+  }
+  .blog__card {
     width: 100%;
   }
 }
