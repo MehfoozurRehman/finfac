@@ -304,6 +304,7 @@ body {
 .feature__section__left__info {
   font-size: 14px;
   color: #000000;
+  font-weight: 500;
   margin-bottom: 1em;
 }
 .feature__section__left__list {
@@ -362,6 +363,34 @@ body {
   width: 500px;
   z-index: -1;
 }
+.why__section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0em 2em;
+  margin: 5em auto;
+  align-items: center;
+  position: relative;
+}
+.why__section__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.why__card {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  font-size: 14px;
+}
+.why__card svg {
+  margin-right: 1em;
+  width: 50px;
+  height: 50px;
+}
 @media (max-width: 1050px) {
   .header__wrapper__menu {
     display: flex;
@@ -410,6 +439,10 @@ body {
   }
   .feature__section__reverse {
     flex-direction: column-reverse;
+  }
+  .why__card {
+    padding: 2em 0em;
+    width: 100%;
   }
 }
 

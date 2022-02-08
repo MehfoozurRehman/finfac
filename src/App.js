@@ -5,11 +5,13 @@ import TestimonialSection from "./components/TestimonialsSection";
 import BlogSection from "./components/BlogSection";
 import PartnersSection from "./components/PartnersSection";
 import FeatureSection from "./components/FeatureSection";
+import WhySection from "./components/WhySection";
 
 export default function App() {
   return (
     <div className="App">
       <Header />
+      <WhySection />
       <FeatureSection
         right={true}
         heading="I want to build my credit history"
