@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import blogPic from "../assets/blogPic.png";
 
 function BlogCard() {
   return (
-    <div className="blog__card">
+    <Link to="blog" className="blog__card">
       <div className="blog__card__box">
         <img src={blogPic} alt="blogsPic" className="blog__card__box__img" />
       </div>
@@ -17,7 +18,7 @@ function BlogCard() {
           Voluptates sunt quae recusandae nemo assumenda ab
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
