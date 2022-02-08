@@ -6,11 +6,15 @@ import BlogSection from "./components/BlogSection";
 import PartnersSection from "./components/PartnersSection";
 import FeatureSection from "./components/FeatureSection";
 import WhySection from "./components/WhySection";
+import ToolsSection from "./components/ToolsSection";
+import HomeSection from "./components/HomeSection";
 
 export default function App() {
   return (
     <div className="App">
       <Header />
+      <HomeSection />
+      <ToolsSection />
       <WhySection />
       <FeatureSection
         heading="Comparing personal loan options is easy!"
