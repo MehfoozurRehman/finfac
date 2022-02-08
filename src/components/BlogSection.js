@@ -24,12 +24,7 @@ function BlogCard() {
 export default function BlogSection() {
   return (
     <section className="blog__section">
-      <div className="section__heading">Our Clients Feedback</div>
-      <div className="section__info">
-        It Is A Long Established Fact That A Reader Will Be Distracted By The
-        Readable Content Of A Page When Looking At Its Layout. The Point Of
-        Using Lorem Ipsum Is
-      </div>
+      <div className="section__heading">Featured Blogs</div>
       <div className="blog__section__content">
         <BlogCard />
         <BlogCard />
