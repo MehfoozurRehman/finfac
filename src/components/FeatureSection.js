@@ -2,7 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import featureLeftSvg from "../assets/featureLeftSvg.png";
 import featureRightSvg from "../assets/featureRightSvg.png";
-export default function FeatureSection({ right, heading, to, info, options }) {
+export default function FeatureSection({
+  optionsSpecial,
+  right,
+  heading,
+  to,
+  info,
+  options,
+}) {
   return (
     <div
       className={
@@ -15,9 +22,13 @@ export default function FeatureSection({ right, heading, to, info, options }) {
         <div className="feature__section__left">
           <div className="feature__section__left__heading">{heading}</div>
           <div className="feature__section__left__info">{info}</div>
-          {options.map((option) => (
-            <div className="feature__section__left__list">{option}</div>
-          ))}
+          {optionsSpecial
+            ? optionsSpecial.map((item) => (
+                <div className="feature__section__left__list">{item.name}</div>
+              ))
+            : options.map((option) => (
+                <div className="feature__section__left__list">{option}</div>
+              ))}
           <Link to={to} className="feature__section__button">
             Get More
           </Link>
@@ -75,9 +86,20 @@ export default function FeatureSection({ right, heading, to, info, options }) {
         <div className="feature__section__left">
           <div className="feature__section__left__heading">{heading}</div>
           <div className="feature__section__left__info">{info}</div>
-          {options.map((option) => (
-            <div className="feature__section__left__list">{option}</div>
-          ))}
+          {optionsSpecial
+            ? optionsSpecial.map((item) => (
+                <>
+                  <div className="feature__section__left__list feature__section__left__list__top">
+                    {item.title}
+                    <div className="feature__section__left__list__details">
+                      {item.info}
+                    </div>
+                  </div>
+                </>
+              ))
+            : options.map((option) => (
+                <div className="feature__section__left__list">{option}</div>
+              ))}
           <Link to={to} className="feature__section__button">
             Get More
           </Link>

@@ -296,7 +296,7 @@ body {
   flex-direction: column;
 }
 .feature__section__left__heading {
-  font-size: 22px;
+  font-size: 25px;
   color: #000000;
   font-weight: bold;
   margin-bottom: 0.5em;
@@ -323,6 +323,15 @@ body {
   height: 18px;
   background: linear-gradient(#ed263d, #77131f);
   border-radius: 50px;
+}
+.feature__section__left__list__top {
+  flex-direction: column;
+  font-weight: 500;
+  align-items: flex-start;
+}
+.feature__section__left__list__details {
+  margin-top: 0.5em;
+  font-weight: normal;
 }
 .feature__section__button {
   background: linear-gradient(#1a1a1a, #373737);
