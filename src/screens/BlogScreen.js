@@ -23,7 +23,16 @@ function BlogListFilter({ name, defaultChecked }) {
 
 function BlogCard() {
   return (
-    <Link to="/" className="blog__home__section__list__entry">
+    <Link
+      to="/blog-detail:travel__vlog"
+      onClick={() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }}
+      className="blog__home__section__list__entry"
+    >
       <div className="blog__home__section__list__entry__box">
         <img
           src={blogPic}
