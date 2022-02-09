@@ -34,8 +34,8 @@ export default function WhySection() {
                   y2="1"
                   gradientUnits="objectBoundingBox"
                 >
-                  <stop offset="0" stop-color="#ed263d" />
-                  <stop offset="1" stop-color="#77131f" />
+                  <stop offset="0" stopColor="#ed263d" />
+                  <stop offset="1" stopColor="#77131f" />
                 </linearGradient>
               </defs>
               <path
@@ -65,8 +65,8 @@ export default function WhySection() {
                   y2="1"
                   gradientUnits="objectBoundingBox"
                 >
-                  <stop offset="0" stop-color="#ed263d" />
-                  <stop offset="1" stop-color="#77131f" />
+                  <stop offset="0" stopColor="#ed263d" />
+                  <stop offset="1" stopColor="#77131f" />
                 </linearGradient>
               </defs>
               <path
@@ -96,8 +96,8 @@ export default function WhySection() {
                   y2="1"
                   gradientUnits="objectBoundingBox"
                 >
-                  <stop offset="0" stop-color="#ed263d" />
-                  <stop offset="1" stop-color="#77131f" />
+                  <stop offset="0" stopColor="#ed263d" />
+                  <stop offset="1" stopColor="#77131f" />
                 </linearGradient>
               </defs>
               <path
@@ -127,8 +127,8 @@ export default function WhySection() {
                   y2="1"
                   gradientUnits="objectBoundingBox"
                 >
-                  <stop offset="0" stop-color="#ed263d" />
-                  <stop offset="1" stop-color="#77131f" />
+                  <stop offset="0" stopColor="#ed263d" />
+                  <stop offset="1" stopColor="#77131f" />
                 </linearGradient>
               </defs>
               <path
@@ -158,8 +158,8 @@ export default function WhySection() {
                   y2="1"
                   gradientUnits="objectBoundingBox"
                 >
-                  <stop offset="0" stop-color="#ed263d" />
-                  <stop offset="1" stop-color="#77131f" />
+                  <stop offset="0" stopColor="#ed263d" />
+                  <stop offset="1" stopColor="#77131f" />
                 </linearGradient>
               </defs>
               <path

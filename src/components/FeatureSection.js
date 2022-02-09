@@ -9,6 +9,7 @@ export default function FeatureSection({
   to,
   info,
   options,
+  isCompare,
 }) {
   return (
     <div
@@ -23,15 +24,34 @@ export default function FeatureSection({
           <div className="feature__section__left__heading">{heading}</div>
           <div className="feature__section__left__info">{info}</div>
           {optionsSpecial
-            ? optionsSpecial.map((item) => (
-                <div className="feature__section__left__list">{item.name}</div>
+            ? optionsSpecial.map((item, i) => (
+                <React.Fragment key={i}>
+                  <div className="feature__section__left__list feature__section__left__list__top">
+                    {item.title}
+                    <div className="feature__section__left__list__details">
+                      {item.info}
+                    </div>
+                  </div>
+                </React.Fragment>
               ))
-            : options.map((option) => (
-                <div className="feature__section__left__list">{option}</div>
+            : options.map((option, i) => (
+                <div className="feature__section__left__list" key={i}>
+                  {option}
+                </div>
               ))}
-          <Link to={to} className="feature__section__button">
-            Get More
-          </Link>
+          <div style={{ marginTop: "2em" }}>
+            <Link to={to} className="feature__section__button">
+              Get More
+            </Link>
+            {isCompare ? (
+              <Link
+                to="/compare_tool"
+                className="feature__section__button__secondary"
+              >
+                Compare Now
+              </Link>
+            ) : null}
+          </div>
         </div>
       ) : (
         <div className="feature__section__right">
@@ -52,9 +72,9 @@ export default function FeatureSection({
             src="https://www.youtube.com/embed/0Dyk8NIrx-E"
             className="feature__section__right__video"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           />
         </div>
       )}
@@ -77,9 +97,9 @@ export default function FeatureSection({
             src="https://www.youtube.com/embed/0Dyk8NIrx-E"
             className="feature__section__right__video"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           />
         </div>
       ) : (
@@ -87,22 +107,34 @@ export default function FeatureSection({
           <div className="feature__section__left__heading">{heading}</div>
           <div className="feature__section__left__info">{info}</div>
           {optionsSpecial
-            ? optionsSpecial.map((item) => (
-                <>
+            ? optionsSpecial.map((item, i) => (
+                <React.Fragment key={i}>
                   <div className="feature__section__left__list feature__section__left__list__top">
                     {item.title}
                     <div className="feature__section__left__list__details">
                       {item.info}
                     </div>
                   </div>
-                </>
+                </React.Fragment>
               ))
-            : options.map((option) => (
-                <div className="feature__section__left__list">{option}</div>
+            : options.map((option, i) => (
+                <div className="feature__section__left__list" key={i}>
+                  {option}
+                </div>
               ))}
-          <Link to={to} className="feature__section__button">
-            Get More
-          </Link>
+          <div style={{ marginTop: "2em" }}>
+            <Link to={to} className="feature__section__button">
+              Get More
+            </Link>
+            {isCompare ? (
+              <Link
+                to="/compare_tool"
+                className="feature__section__button__secondary"
+              >
+                Compare Now
+              </Link>
+            ) : null}
+          </div>
         </div>
       )}
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function ContactSection() {
-  return <div className="contact__section"></div>;
+  return <section id="contact__section" className="contact__section"></section>;
 }

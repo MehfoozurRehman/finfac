@@ -3,18 +3,20 @@ import Marquee from "react-fast-marquee";
 import logo from "../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
 import { Menu, X } from "react-feather";
+import { Link } from "react-router-dom";
 
-function NavLink({ to, children, setIsNavOpen }) {
+function NavLink({ to, children, setIsNavOpen, dropDownOptions }) {
   const navigate = useNavigate();
   return (
     <div className="header__wrapper__nav__link">
       <input
         type="radio"
-        defaultChecked={to === window.location.pathname}
         className="header__wrapper__nav__link__input"
         name="header__wrapper__nav__link__input"
         onClick={() => {
-          navigate(to);
+          if (!dropDownOptions) {
+            navigate(to);
+          }
           window.scrollTo({
             top: 0,
             behavior: "smooth",
@@ -25,6 +27,20 @@ function NavLink({ to, children, setIsNavOpen }) {
         }}
       />
       <div className="header__wrapper__nav__link__content">{children}</div>
+      {dropDownOptions && (
+        <div className="header__wrapper__nav__link__overlay">
+          {dropDownOptions &&
+            dropDownOptions.map((option, i) => (
+              <Link
+                to={option.to}
+                key={i}
+                className="header__wrapper__nav__link__overlay__link"
+              >
+                {option.name}
+              </Link>
+            ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -45,7 +61,6 @@ export default function Header() {
         setIsNavOpen(true);
       }
     });
-    return () => window.removeEventListener("resize");
   }, []);
   return (
     <div className="header">
@@ -95,6 +110,16 @@ export default function Header() {
               to="/invested-money"
               id="investedMoney"
               setIsNavOpen={setIsNavOpen}
+              dropDownOptions={[
+                {
+                  name: "Mutual Funds",
+                  to: "/tool-details:mutal_funds",
+                },
+                {
+                  name: "National Savings",
+                  to: "/tool-details:national_savings",
+                },
+              ]}
             >
               Invest Money
             </NavLink>
@@ -102,6 +127,16 @@ export default function Header() {
               to="/need-money"
               id="needMoney"
               setIsNavOpen={setIsNavOpen}
+              dropDownOptions={[
+                {
+                  name: "Mutual Funds",
+                  to: "/tool-details:mutal_funds",
+                },
+                {
+                  name: "National Savings",
+                  to: "/tool-details:national_savings",
+                },
+              ]}
             >
               Need Money
             </NavLink>
@@ -109,6 +144,16 @@ export default function Header() {
               to="/protection"
               id="protection"
               setIsNavOpen={setIsNavOpen}
+              dropDownOptions={[
+                {
+                  name: "Mutual Funds",
+                  to: "/tool-details:mutal_funds",
+                },
+                {
+                  name: "National Savings",
+                  to: "/tool-details:national_savings",
+                },
+              ]}
             >
               Protection
             </NavLink>
@@ -123,9 +168,8 @@ export default function Header() {
                 type="radio"
                 className="header__wrapper__nav__button__input"
                 name="header__wrapper__nav__link__input"
-                defaultChecked={"/contact-us" === window.location.pathname}
                 onClick={() => {
-                  navigate("contact-us");
+                  document.getElementById("contact__section").scrollIntoView();
                   if (window.innerWidth < 1050) {
                     setIsNavOpen(false);
                   }

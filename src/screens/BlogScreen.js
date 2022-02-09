@@ -4,11 +4,12 @@ import blogBg from "../assets/blogBg.png";
 import { Link } from "react-router-dom";
 import Pagination from "react-js-pagination";
 
-function BlogListFilter({ name }) {
+function BlogListFilter({ name, defaultChecked }) {
   return (
     <div className="blog__home__section__list__filters__entry">
       <input
         type="radio"
+        defaultChecked={defaultChecked}
         className="blog__home__section__list__filters__entry__input"
         name="blog__home__section__list__filters__entry__input"
       />
@@ -80,7 +81,7 @@ export default function BlogScreen() {
       </div>
       <div className="blog__home__section__list">
         <div className="blog__home__section__list__filters">
-          <BlogListFilter name="All" />
+          <BlogListFilter name="All" defaultChecked={true} />
           <BlogListFilter name="Auto Loan" />
           <BlogListFilter name="Travel Insurance" />
           <BlogListFilter name="Health Insurance" />
