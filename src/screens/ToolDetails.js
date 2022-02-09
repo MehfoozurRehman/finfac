@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FeatureSection from "../components/FeatureSection";
+import ContactSection from "../components/ContactSection";
 
 export default function ToolDetails({}) {
   const [compare, setCompare] = useState(true);
   return (
     <>
-      {" "}
       <div className="tools__home__section">
         {compare ? (
           <div className="tools__home__section__top">
@@ -80,6 +80,7 @@ export default function ToolDetails({}) {
           />
         </div>
       </div>
+      <ContactSection />
     </>
   );
 }

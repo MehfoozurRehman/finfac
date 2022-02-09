@@ -3,6 +3,7 @@ import blogPic from "../assets/blogPic.png";
 import blogBg from "../assets/blogBg.png";
 import { Link } from "react-router-dom";
 import Pagination from "react-js-pagination";
+import ContactSection from "../components/ContactSection";
 
 function BlogListFilter({ name, defaultChecked }) {
   return (
@@ -68,44 +69,47 @@ function BlogCard() {
 
 export default function BlogScreen() {
   return (
-    <div className="blog__home__section">
-      <div className="blog__home__section__background">
-        <img
-          src={blogBg}
-          alt="blogBg"
-          className="blog__home__section__background__img"
-        />
-        <div className="blog__home__section__background__overlay">
-          Featured Blogs
+    <>
+      <div className="blog__home__section">
+        <div className="blog__home__section__background">
+          <img
+            src={blogBg}
+            alt="blogBg"
+            className="blog__home__section__background__img"
+          />
+          <div className="blog__home__section__background__overlay">
+            Featured Blogs
+          </div>
         </div>
-      </div>
-      <div className="blog__home__section__list">
         <div className="blog__home__section__list__filters">
           <BlogListFilter name="All" defaultChecked={true} />
           <BlogListFilter name="Auto Loan" />
           <BlogListFilter name="Travel Insurance" />
           <BlogListFilter name="Health Insurance" />
         </div>
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        <div className="blog__home__section__list">
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+        </div>
+        <Pagination
+          itemsCountPerPage={10}
+          totalItemsCount={450}
+          pageRangeDisplayed={5}
+        />
       </div>
-      {/* <Pagination
-        itemsCountPerPage={10}
-        totalItemsCount={450}
-        pageRangeDisplayed={5}
-      /> */}
-    </div>
+      <ContactSection />
+    </>
   );
 }
