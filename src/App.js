@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import BlogScreen from "./screens/BlogScreen";
 import ToolDetails from "./screens/ToolDetails";
 import BlogDetailsScreen from "./screens/BlogDetailsScreen";
+import GuideScreen from "./screens/GuideScreen";
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/tool-details:id" element={<ToolDetails />} />
-        <Route path="/guide" element={<HomeScreen />} />
+        <Route path="/guide" element={<GuideScreen />} />
         <Route path="/blog" element={<BlogScreen />} />
         <Route path="/blog-detail:id" element={<BlogDetailsScreen />} />
       </Routes>

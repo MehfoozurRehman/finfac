@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function HomeSection() {
+  const [screenSize, setScreenSize] = useState("large");
+  useEffect(() => {
+    if (window.innerWidth > 1250) {
+      setScreenSize("large");
+    } else if (window.innerWidth < 1250 && window.innerWidth > 900) {
+      setScreenSize("medium");
+    } else if (window.innerWidth < 900) {
+      setScreenSize("small");
+    }
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1250) {
+        setScreenSize("large");
+      } else if (window.innerWidth < 1250 && window.innerWidth > 900) {
+        setScreenSize("medium");
+      } else if (window.innerWidth < 900) {
+        setScreenSize("small");
+      }
+    });
+  }, []);
   return (
     <div className="home__section">
       <div className="home__section__top">
@@ -70,28 +90,89 @@ export default function HomeSection() {
         </div>
       </div>
       <div className="home__section__overlay">
-        <div className="home__section__overlay__entry">
-          <div className="home__section__overlay__entry__heading">Kibor</div>
-          <div className="home__section__overlay__entry__info">57%</div>
-        </div>
-        <div className="home__section__overlay__entry">
-          <div className="home__section__overlay__entry__heading">
-            Dollar Exchange Rate
-          </div>
-          <div className="home__section__overlay__entry__info">143.54Rs</div>
-        </div>
-        <div className="home__section__overlay__entry">
-          <div className="home__section__overlay__entry__heading">
-            Gdp To Pkr
-          </div>
-          <div className="home__section__overlay__entry__info">4343</div>
-        </div>
-        <div className="home__section__overlay__entry">
-          <div className="home__section__overlay__entry__heading">
-            Gold Rate
-          </div>
-          <div className="home__section__overlay__entry__info">1234212</div>
-        </div>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={
+            screenSize === "large"
+              ? 4
+              : screenSize === "medium"
+              ? 2
+              : screenSize === "small"
+              ? 1
+              : 4
+          }
+          //   onSlideChange={() => console.log("slide change")}
+          //   onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <div className="home__section__overlay__entry">
+              <div className="home__section__overlay__entry__heading">
+                Kibor
+              </div>
+              <div className="home__section__overlay__entry__info">57%</div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home__section__overlay__entry">
+              <div className="home__section__overlay__entry__heading">
+                Dollar Exchange Rate
+              </div>
+              <div className="home__section__overlay__entry__info">
+                143.54Rs
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home__section__overlay__entry">
+              <div className="home__section__overlay__entry__heading">
+                Gdp To Pkr
+              </div>
+              <div className="home__section__overlay__entry__info">4343</div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home__section__overlay__entry">
+              <div className="home__section__overlay__entry__heading">
+                Gold Rate
+              </div>
+              <div className="home__section__overlay__entry__info">1234212</div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home__section__overlay__entry">
+              <div className="home__section__overlay__entry__heading">
+                Kibor
+              </div>
+              <div className="home__section__overlay__entry__info">57%</div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home__section__overlay__entry">
+              <div className="home__section__overlay__entry__heading">
+                Dollar Exchange Rate
+              </div>
+              <div className="home__section__overlay__entry__info">
+                143.54Rs
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home__section__overlay__entry">
+              <div className="home__section__overlay__entry__heading">
+                Gdp To Pkr
+              </div>
+              <div className="home__section__overlay__entry__info">4343</div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="home__section__overlay__entry">
+              <div className="home__section__overlay__entry__heading">
+                Gold Rate
+              </div>
+              <div className="home__section__overlay__entry__info">1234212</div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );

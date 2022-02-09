@@ -86,9 +86,9 @@ export default function Header() {
         accident, sometimes on purpose (injected humour and the like).
       </Marquee>
       <div className="header__wrapper">
-        <a href="#" className="header__wrapper__logo">
+        <Link to="/" className="header__wrapper__logo">
           <img src={logo} alt="logo" className="header__wrapper__logo__img" />
-        </a>
+        </Link>
         <button
           className="header__wrapper__menu"
           onClick={() => {
@@ -129,12 +129,16 @@ export default function Header() {
               setIsNavOpen={setIsNavOpen}
               dropDownOptions={[
                 {
-                  name: "Mutual Funds",
-                  to: "/tool-details:mutal_funds",
+                  name: "Credit Card",
+                  to: "/tool-details:credit_card",
                 },
                 {
-                  name: "National Savings",
-                  to: "/tool-details:national_savings",
+                  name: "Car Loans",
+                  to: "/tool-details:car_loans",
+                },
+                {
+                  name: "Home Loans",
+                  to: "/tool-details:home_loans",
                 },
               ]}
             >
@@ -146,12 +150,20 @@ export default function Header() {
               setIsNavOpen={setIsNavOpen}
               dropDownOptions={[
                 {
-                  name: "Mutual Funds",
-                  to: "/tool-details:mutal_funds",
+                  name: "Health Insurance",
+                  to: "/tool-details:health_insurance",
                 },
                 {
-                  name: "National Savings",
-                  to: "/tool-details:national_savings",
+                  name: "Life Insurance",
+                  to: "/tool-details:life_insurance",
+                },
+                {
+                  name: "Travel Insurance",
+                  to: "/tool-details:travel_insurance",
+                },
+                {
+                  name: "Car Insurance",
+                  to: "/tool-details:car_insurance",
                 },
               ]}
             >

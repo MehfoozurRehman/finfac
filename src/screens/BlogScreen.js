@@ -89,13 +89,14 @@ export default function BlogScreen() {
           <div className="blog__home__section__background__overlay">
             Featured Blogs
           </div>
+          <div className="blog__home__section__list__filters">
+            <BlogListFilter name="All" defaultChecked={true} />
+            <BlogListFilter name="Auto Loan" />
+            <BlogListFilter name="Travel Insurance" />
+            <BlogListFilter name="Health Insurance" />
+          </div>
         </div>
-        <div className="blog__home__section__list__filters">
-          <BlogListFilter name="All" defaultChecked={true} />
-          <BlogListFilter name="Auto Loan" />
-          <BlogListFilter name="Travel Insurance" />
-          <BlogListFilter name="Health Insurance" />
-        </div>
+
         <div className="blog__home__section__list">
           <BlogCard />
           <BlogCard />
