@@ -16,6 +16,7 @@ export default function App() {
         <Route path="/guide" element={<HomeScreen />} />
         <Route path="/blog" element={<BlogScreen />} />
       </Routes>
+      <Header />
     </div>
   );
 }
