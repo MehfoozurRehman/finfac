@@ -181,7 +181,20 @@ export default function Header() {
                 className="header__wrapper__nav__button__input"
                 name="header__wrapper__nav__link__input"
                 onClick={() => {
-                  document.getElementById("contact__section").scrollIntoView();
+                  var elementExists =
+                    document.getElementById("contact__section");
+                  if (elementExists != null) {
+                    document
+                      .getElementById("contact__section")
+                      .scrollIntoView();
+                  } else {
+                    navigate("/");
+                    setTimeout(() => {
+                      document
+                        .getElementById("contact__section")
+                        .scrollIntoView();
+                    }, 300);
+                  }
                   if (window.innerWidth < 1050) {
                     setIsNavOpen(false);
                   }

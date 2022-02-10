@@ -92,7 +92,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   width: 200px;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
 }
 
 .header__wrapper__nav__link__overlay__link:last-child {
@@ -1712,6 +1712,11 @@ body {
   justify-content: space-between;
 }
 
+.guide__container {
+  width: 100%;
+  height: 70vh;
+}
+
 @media (max-width: 1440px) {
   .home__section__overlay {
     left: 0px;
@@ -1721,7 +1726,28 @@ body {
   .header__wrapper__menu {
     display: flex;
   }
-
+  .header__wrapper__nav__link {
+    width: 100%;
+    text-align: center;
+  }
+  .header__wrapper__nav__link__content::after {
+    display: none;
+  }
+  .header__wrapper__nav__link__overlay {
+    transition: 300ms ease-in-out;
+    position: relative;
+    top: 0px;
+    width: 100%;
+    box-shadow: none;
+    left: auto;
+    background-color: #f9f9ff;
+    border-radius: 0px;
+    padding: 0.8em;
+    z-index: 5;
+  }
+  .header__wrapper__nav__link__overlay__link {
+    width: 100%;
+  }
   .header__wrapper__nav {
     position: absolute;
     top: 120px;

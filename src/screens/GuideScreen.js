@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function GuideScreen() {
-  return <div>GuideScreen</div>;
+  return <div className="guide__container"></div>;
 }
