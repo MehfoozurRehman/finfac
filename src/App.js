@@ -7,15 +7,21 @@ import BlogScreen from "./screens/BlogScreen";
 import ToolDetails from "./screens/ToolDetails";
 import BlogDetailsScreen from "./screens/BlogDetailsScreen";
 import GuideScreen from "./screens/GuideScreen";
+import CompareScreen from "./screens/CompareScreen";
+import CreditCardPopup from "./components/CreditCardPopup";
 
 export default function App() {
+  const [creditCardPopup, setCreditCardPopup] = useState(false);
   return (
     <div className="App">
+      {creditCardPopup ? <CreditCardPopup /> : null}
+
       <Header />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/tool-details:id" element={<ToolDetails />} />
         <Route path="/guide" element={<GuideScreen />} />
+        <Route path="/compare" element={<CompareScreen />} />
         <Route path="/blog" element={<BlogScreen />} />
         <Route path="/blog-detail:id" element={<BlogDetailsScreen />} />
       </Routes>
