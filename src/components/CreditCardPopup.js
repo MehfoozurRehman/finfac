@@ -2,13 +2,9 @@ import React, { useEffect } from "react";
 import Popup from "./Popup";
 import PopupRadioButton from "./PopupRadioButton";
 
-export default function CreditCardPopup() {
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => (document.body.style.overflow = "auto");
-  }, []);
+export default function CreditCardPopup({ onClose }) {
   return (
-    <Popup title="Compare Credit Card">
+    <Popup title="Compare Credit Card" onClose={onClose}>
       <div className="popup__container__form__label">CardType</div>
       <div className="popup__container__form__row">
         <PopupRadioButton defaultChecked name="cardType">

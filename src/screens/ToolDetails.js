@@ -14,7 +14,7 @@ export default function ToolDetails({}) {
               <div className="tools__home__section__top__col__heading">
                 Prime Minister Loan Scheme
               </div>
-              <Link to="/" className="feature__section__button">
+              <Link to="/compare" className="feature__section__button">
                 Compare
               </Link>
             </div>
@@ -22,7 +22,7 @@ export default function ToolDetails({}) {
               <div className="tools__home__section__top__col__heading">
                 Commercial Loan
               </div>
-              <Link to="/" className="feature__section__button">
+              <Link to="/compare" className="feature__section__button">
                 Compare
               </Link>
             </div>

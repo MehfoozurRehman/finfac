@@ -11,7 +11,11 @@ export default function Popup({ children, title, onClose, onSubmit }) {
     <div className="popup">
       <img src={popupLogo} alt="popupLogo" className="popup__img" />
       <form onSubmit={onSubmit} className="popup__container__form">
-        <button className="popup__container__form__close" onClick={onClose}>
+        <button
+          type="button"
+          className="popup__container__form__close"
+          onClick={onClose}
+        >
           <X size={20} color="currentColor" strokeWidth={3} />
         </button>
         <div className="popup__container__name">{title}</div>
@@ -22,4 +26,31 @@ export default function Popup({ children, title, onClose, onSubmit }) {
       </form>
     </div>
   );
+}
+{
+  /* <div className="popup__container__form__row" style={{ marginBottom: 0 }}>
+        <div
+          className="popup__container__form__label "
+          style={{ width: "50%" }}
+        >
+          Your Contribution
+        </div>
+        <div
+          className="popup__container__form__label"
+          style={{ width: "50%", color: "#ed263d", textAlign: "right" }}
+        >
+          42%
+        </div>
+      </div>
+      <div className="popup__container__form__row">
+        <Slider />
+      </div>
+      <div className="popup__container__form__row" style={{ marginBottom: 0 }}>
+        <div
+          className="popup__container__form__label"
+          style={{ textAlign: "right" }}
+        >
+          Tenure
+        </div>
+      </div> */
 }
