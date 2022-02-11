@@ -164,11 +164,17 @@ function CompareItem({ onOrder }) {
   );
 }
 
-export default function CompareScreen() {
+export default function CompareScreen({
+  setCompareMorePopup,
+  setPlaceOrderPopup,
+}) {
   return (
     <div className="compare__screen">
       <div className="compare__screen__header">
-        <button className="compare__screen__header__button">
+        <button
+          className="compare__screen__header__button"
+          onClick={() => setCompareMorePopup(true)}
+        >
           Compare More
         </button>
         <Link to="/" className="header__wrapper__logo">
@@ -208,19 +214,39 @@ export default function CompareScreen() {
       <div className="compare__screen__table__compare">
         <div className="compare__screen__table__compare__col"></div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem onOrder={() => {}} />
+          <CompareItem
+            onOrder={() => {
+              setPlaceOrderPopup(true);
+            }}
+          />
         </div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem onOrder={() => {}} />
+          <CompareItem
+            onOrder={() => {
+              setPlaceOrderPopup(true);
+            }}
+          />
         </div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem onOrder={() => {}} />
+          <CompareItem
+            onOrder={() => {
+              setPlaceOrderPopup(true);
+            }}
+          />
         </div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem onOrder={() => {}} />
+          <CompareItem
+            onOrder={() => {
+              setPlaceOrderPopup(true);
+            }}
+          />
         </div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem onOrder={() => {}} />
+          <CompareItem
+            onOrder={() => {
+              setPlaceOrderPopup(true);
+            }}
+          />
         </div>
       </div>
       <Table

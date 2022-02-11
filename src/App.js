@@ -16,6 +16,8 @@ import LifeInsurancePopup from "./components/LifeInsurancePopup";
 import TravelInsurancePopup from "./components/TravelInsurancePopup";
 import CarInsurancePopup from "./components/CarInsurancePopup";
 import Footer from "./components/Footer";
+import PlaceOrderPopup from "./components/PlaceOrderPopup";
+import CompareMorePopup from "./components/CompareMorePopup";
 
 export default function App() {
   const [creditCardPopup, setCreditCardPopup] = useState(false);
@@ -25,6 +27,8 @@ export default function App() {
   const [lifeInsurancePopup, setLifeInsurancePopup] = useState(false);
   const [travelInsurancePopup, setTravelInsurancePopup] = useState(false);
   const [carInsurancePopup, setCarInsurancePopup] = useState(false);
+  const [placeOrderPopup, setPlaceOrderPopup] = useState(false);
+  const [compareMorePopup, setCompareMorePopup] = useState(false);
   return (
     <div className="App">
       {creditCardPopup ? (
@@ -48,12 +52,26 @@ export default function App() {
       {carInsurancePopup ? (
         <CarInsurancePopup onClose={() => setCarInsurancePopup(false)} />
       ) : null}
+      {placeOrderPopup ? (
+        <PlaceOrderPopup onClose={() => setPlaceOrderPopup(false)} />
+      ) : null}
+      {compareMorePopup ? (
+        <CompareMorePopup onClose={() => setCompareMorePopup(false)} />
+      ) : null}
       <Header />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/tool-details:id" element={<ToolDetails />} />
         <Route path="/guide" element={<GuideScreen />} />
-        <Route path="/compare" element={<CompareScreen />} />
+        <Route
+          path="/compare"
+          element={
+            <CompareScreen
+              setCompareMorePopup={setCompareMorePopup}
+              setPlaceOrderPopup={setPlaceOrderPopup}
+            />
+          }
+        />
         <Route path="/blog" element={<BlogScreen />} />
         <Route path="/blog-detail:id" element={<BlogDetailsScreen />} />
       </Routes>
