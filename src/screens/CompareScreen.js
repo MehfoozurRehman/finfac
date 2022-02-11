@@ -113,7 +113,7 @@ function Table({
   );
 }
 
-function CompareItem() {
+function CompareItem({ onOrder }) {
   return (
     <div className="compare__screen__table__compare__col__entry">
       <button className="compare__screen__table__compare__col__entry__close">
@@ -154,7 +154,10 @@ function CompareItem() {
       <div className="compare__screen__table__compare__col__entry__name">
         AMC 5
       </div>
-      <button className="compare__screen__table__compare__col__entry__button">
+      <button
+        className="compare__screen__table__compare__col__entry__button"
+        onClick={onOrder}
+      >
         Order Now
       </button>
     </div>
@@ -171,7 +174,10 @@ export default function CompareScreen() {
         <Link to="/" className="header__wrapper__logo">
           <img src={logo} alt="logo" className="header__wrapper__logo__img" />
         </Link>
-        <a href="#" className="compare__screen__header__button">
+        <a
+          href="http://www.africau.edu/images/default/sample.pdf"
+          className="compare__screen__header__button"
+        >
           Download
         </a>
       </div>
@@ -202,19 +208,19 @@ export default function CompareScreen() {
       <div className="compare__screen__table__compare">
         <div className="compare__screen__table__compare__col"></div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem />
+          <CompareItem onOrder={() => {}} />
         </div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem />
+          <CompareItem onOrder={() => {}} />
         </div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem />
+          <CompareItem onOrder={() => {}} />
         </div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem />
+          <CompareItem onOrder={() => {}} />
         </div>
         <div className="compare__screen__table__compare__col">
-          <CompareItem />
+          <CompareItem onOrder={() => {}} />
         </div>
       </div>
       <Table
