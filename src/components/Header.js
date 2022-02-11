@@ -66,7 +66,8 @@ export default function Header() {
     <div className="header">
       <Marquee
         delay={0}
-        speed={100}
+        speed={50}
+        pauseOnHover
         style={{
           backgroundColor: "#2C2C2C",
           color: "#ffffff",
