@@ -681,10 +681,10 @@ body {
   justify-content: space-between;
   align-content: center;
   border-radius: 50px;
-  left: calc(50% - 720px);
-  position: absolute;
-  bottom: 50px;
+  margin-top: -50px;
+  margin-left: calc(50% - 720px);
   flex-wrap: wrap;
+  z-index: 30;
 }
 
 .home__section__overlay__entry__heading {
@@ -1847,7 +1847,7 @@ body {
 }
 @media (max-width: 1440px) {
   .home__section__overlay {
-    left: 0px;
+    margin-left: 0px;
     bottom: 95px;
   }
 }
