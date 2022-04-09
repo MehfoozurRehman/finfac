@@ -18,6 +18,7 @@ import CarInsurancePopup from "./components/CarInsurancePopup";
 import Footer from "./components/Footer";
 import PlaceOrderPopup from "./components/PlaceOrderPopup";
 import CompareMorePopup from "./components/CompareMorePopup";
+import CarLoanCalculator from "./screens/CarLoanCalculator";
 
 export default function App() {
   const [creditCardPopup, setCreditCardPopup] = useState(false);
@@ -74,6 +75,7 @@ export default function App() {
         />
         <Route path="/blog" element={<BlogScreen />} />
         <Route path="/blog-detail:id" element={<BlogDetailsScreen />} />
+        <Route path="/car-loan-calculator" element={<CarLoanCalculator />} />
       </Routes>
       <Footer />
     </div>
