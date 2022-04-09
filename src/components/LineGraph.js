@@ -80,10 +80,10 @@ export default class LineGraph extends PureComponent {
           <Line
             type="monotone"
             dataKey="pv"
-            stroke="#8884d8"
+            stroke="#77131f"
             activeDot={{ r: 8 }}
           />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="uv" stroke="#ed263d" />
         </LineChart>
       </ResponsiveContainer>
     );
