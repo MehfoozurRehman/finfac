@@ -1962,8 +1962,13 @@ body {
   height: fit-content;
   padding: 6em 2em;
   display: flex;
+  flex-direction: column;
+}
+.calculator__section__content__top {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .calculator__container__content {
   width: 100%;
@@ -2055,6 +2060,46 @@ body {
   width: 100%;
   margin-bottom: 2em;
 }
+.calulator__section__content__botttom__card {
+  width: 100%;
+  height: fit-content;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
+  margin-top: 1em;
+  padding: 1em;
+}
+.calulator__section__content__botttom__card__heading__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calulator__section__content__botttom__card__heading__row__entry {
+  width: 20%;
+  padding: 0em 2em;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.calulator__section__content__botttom__card__content__row__entry {
+  width: 20%;
+  padding: 1em 2em;
+  text-align: center;
+  font-size: 16px;
+}
+.calulator__section__content__botttom__heading {
+  font-size: 24px;
+  color: #000000;
+  margin-top: 2em;
+  font-weight: bold;
+}
+.calulator__section__content__botttom__card__content__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 1440px) {
   .home__section__overlay {
     margin-left: 0px;
@@ -2062,6 +2107,34 @@ body {
   }
 }
 @media (max-width: 1050px) {
+  .calulator__section__content__botttom__card__heading__row__entry {
+    min-width: 180px;
+  }
+  .calulator__section__content__botttom__card__content__row__entry {
+    min-width: 180px;
+  }
+  .calulator__section__content__botttom__card {
+    overflow-x: auto;
+    width: 100%;
+  }
+  .calulator__section__content__top {
+    flex-direction: column;
+  }
+  .car__loan__calculator__content__card {
+    width: 100%;
+  }
+  .calulator__section__content__botttom__card::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    cursor: pointer;
+  }
+  .calulator__section__content__botttom__card::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 6px;
+  }
+  .calulator__section__content__botttom__card::-webkit-scrollbar-track {
+    background: transparent;
+  }
   .header__wrapper__menu {
     display: flex;
   }
@@ -2118,6 +2191,16 @@ body {
   }
 }
 @media (max-width: 900px) {
+  .calculator__container {
+    flex-direction: column;
+  }
+  .calculator__container__left {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .calculator__container__img {
+    width: 300px;
+  }
   .blog__card {
     width: 48%;
     margin-bottom: 2em;
