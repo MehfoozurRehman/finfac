@@ -50,6 +50,7 @@ export default function GuideScreen() {
         <CalculatorCard
           icon={autoLoan}
           iconActive={autoLoanActive}
+          path="/home-loan-calculator"
           name="Home Loan Calculator"
         />
         <CalculatorCard
