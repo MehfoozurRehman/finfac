@@ -3,28 +3,6 @@ import contactPic from "../assets/contactPic.svg";
 import PaymentsChart from "../components/PaymentsChart";
 import RangeSlider from "../components/RangeSlider";
 
-function AmortizationCardEntry() {
-  return (
-    <div className="calulator__section__content__botttom__card__content__row">
-      <div className="calulator__section__content__botttom__card__content__row__entry">
-        1
-      </div>
-      <div className="calulator__section__content__botttom__card__content__row__entry">
-        26,20,000
-      </div>
-      <div className="calulator__section__content__botttom__card__content__row__entry">
-        6,20,000
-      </div>
-      <div className="calulator__section__content__botttom__card__content__row__entry">
-        26,20,00
-      </div>
-      <div className="calulator__section__content__botttom__card__content__row__entry">
-        20,000
-      </div>
-    </div>
-  );
-}
-
 export default function CarLoanCalculator() {
   return (
     <>
@@ -50,77 +28,46 @@ export default function CarLoanCalculator() {
         />
       </div>
       <div className="calculator__section">
-        <div className="calculator__section__content">
-          <div className="calulator__section__content__top">
-            <div className="car__loan__calculator__content__card">
-              <div className="car__loan__calculator__content__card__left">
-                <RangeSlider
-                  title="Loan Amount ($)"
-                  value="26200"
-                  minRange="1 Lac"
-                  maxRange="1 Cr"
-                />
-                <RangeSlider
-                  title="Interest Rate (p.a)"
-                  value="10.5%"
-                  minRange="7%"
-                  maxRange="10.5%"
-                />
-                <RangeSlider
-                  title="Tenure (years)"
-                  value="3"
-                  minRange="1"
-                  maxRange="8"
-                />
-              </div>
-              <div className="car__loan__calculator__content__card__right">
-                <div className="car__loan__calculator__content__card__right__banner">
-                  Equated Monthly Installments (EMI) 85,156
-                </div>
-              </div>
+        <div className="car__loan__section__content">
+          <div className="car__loan__calculator__content__card">
+            <div className="car__loan__calculator__content__card__left">
+              <RangeSlider
+                title="Loan Amount ($)"
+                value="26200"
+                minRange="1 Lac"
+                maxRange="1 Cr"
+              />
+              <RangeSlider
+                title="Interest Rate (p.a)"
+                value="10.5%"
+                minRange="7%"
+                maxRange="10.5%"
+              />
+              <RangeSlider
+                title="Tenure (years)"
+                value="3"
+                minRange="1"
+                maxRange="8"
+              />
             </div>
-            <div className="car__loan__calculator__graph__card">
-              <PaymentsChart />
-              <div className="car__loan__calculator__graph__card__entry__wrapper">
-                <div className="car__loan__calculator__graph__card__entry">
-                  <span>Principal Amt</span>3,00,000
-                </div>
-                <div className="car__loan__calculator__graph__card__entry">
-                  <span>Interest Amt</span>24,00,000
-                </div>
-                <div className="car__loan__calculator__graph__card__entry">
-                  <span>Total Amt Payble</span>241,00,000
-                </div>
+            <div className="car__loan__calculator__content__card__right">
+              <div className="car__loan__calculator__content__card__right__banner">
+                Equated Monthly Installments (EMI) 85,156
               </div>
             </div>
           </div>
-          <div className="calulator__section__content__botttom">
-            <div className="calulator__section__content__botttom__heading">
-              Amortization Schedule
-            </div>
-            <div className="calulator__section__content__botttom__card">
-              <div className="calulator__section__content__botttom__card__heading__row">
-                <div className="calulator__section__content__botttom__card__heading__row__entry">
-                  Year
-                </div>
-                <div className="calulator__section__content__botttom__card__heading__row__entry">
-                  Opening Balance
-                </div>
-                <div className="calulator__section__content__botttom__card__heading__row__entry">
-                  Interest paid during the year
-                </div>
-                <div className="calulator__section__content__botttom__card__heading__row__entry">
-                  Principal repaid during the year
-                </div>
-                <div className="calulator__section__content__botttom__card__heading__row__entry">
-                  Closing Balance
-                </div>
+          <div className="car__loan__calculator__graph__card">
+            <PaymentsChart />
+            <div className="car__loan__calculator__graph__card__entry__wrapper">
+              <div className="car__loan__calculator__graph__card__entry">
+                <span>Principal Amt</span>3,00,000
               </div>
-              <AmortizationCardEntry />
-              <AmortizationCardEntry />
-              <AmortizationCardEntry />
-              <AmortizationCardEntry />
-              <AmortizationCardEntry />
+              <div className="car__loan__calculator__graph__card__entry">
+                <span>Interest Amt</span>24,00,000
+              </div>
+              <div className="car__loan__calculator__graph__card__entry">
+                <span>Total Amt Payble</span>241,00,000
+              </div>
             </div>
           </div>
         </div>

@@ -2401,6 +2401,15 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.car__loan__section__content {
+  width: 100%;
+  max-width: 1360px;
+  height: fit-content;
+  padding: 6em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media (max-width: 1440px) {
   .home__section__overlay {
     margin-left: 0px;
@@ -2408,6 +2417,13 @@ body {
   }
 }
 @media (max-width: 1050px) {
+  .car__loan__section__content {
+    flex-direction: column;
+  }
+  .car__loan__calculator__graph__card {
+    width: 100%;
+    margin-top: 1em;
+  }
   .credit__card__section__content__top {
     flex-direction: column;
   }
