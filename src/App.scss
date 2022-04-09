@@ -2005,6 +2005,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+.credit__card__calculator__content__card {
+  width: 55%;
+  background: #fff;
+  height: fit-content;
+  padding: 2em;
+  border-radius: 14px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .sip__calculator__content__card {
   width: 100%;
   background: #fff;
@@ -2109,6 +2121,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1em 0em;
 }
 .calulator__section__content__botttom__card__heading__row__entry {
   width: 20%;
@@ -2281,6 +2295,112 @@ body {
   margin-right: 1em;
   font-weight: 600;
 }
+.credit__card__calculator__graph__card {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
+  padding: 2em;
+}
+.credit__card__calculator__graph__card__left__entry {
+  width: 100%;
+  font-size: 14px;
+  margin-top: 1em;
+  color: rgba(0, 0, 0, 0.8);
+}
+.credit__card__calculator__graph__card__left__entry span {
+  font-weight: 600;
+}
+.credit__card__calculator__graph__card__left {
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.credit__card__section__content__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.credit__card__calculator__graph__card__entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #000000;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  padding: 1em 0em;
+}
+.credit__card__calculator__graph__card__entry span {
+  font-weight: 600;
+}
+.credit__card__calculator__content__card__heading {
+  font-size: 18px;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.calulator__section__content__btn {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  width: 120px;
+  cursor: pointer;
+}
+.calulator__section__content__btn__wrapper {
+  display: flex;
+  align-items: center;
+  margin: 1.5em 0em;
+}
+.calulator__section__content__btn__circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-right: 0.5em;
+}
+.calulator__section__content__btn__circle:hover {
+  background: linear-gradient(#ed263d, #77131f);
+  border: none;
+}
+.calulator__section__content__btn__circle__select {
+  background: linear-gradient(#ed263d, #77131f);
+  border: none;
+}
+.car__loan__calculator__graph__card {
+  background: #fff;
+  padding: 2em;
+  border-radius: 12px;
+  width: 33%;
+}
+.car__loan__calculator__graph__card__entry {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 1em 0em;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+}
+.car__loan__calculator__graph__card__entry span {
+  font-weight: 600;
+}
+.car__loan__calculator__graph__card__entry__wrapper {
+  margin-top: -70px;
+}
+.calulator__section__content__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 @media (max-width: 1440px) {
   .home__section__overlay {
     margin-left: 0px;
@@ -2288,6 +2408,16 @@ body {
   }
 }
 @media (max-width: 1050px) {
+  .credit__card__section__content__top {
+    flex-direction: column;
+  }
+  .credit__card__calculator__content__card {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .credit__card__calculator__graph__card__left {
+    width: 100%;
+  }
   .calulator__section__content__botttom__card__heading__row__entry {
     min-width: 180px;
   }
@@ -2372,6 +2502,20 @@ body {
   }
 }
 @media (max-width: 900px) {
+  .car__loan__calculator__content__card {
+    flex-direction: column;
+  }
+  .car__loan__calculator__content__card__left {
+    width: 100%;
+  }
+  .car__loan__calculator__content__card__right {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .car__loan__calculator__graph__card {
+    width: 100%;
+    margin-top: 1em;
+  }
   .sip__calculator__content__card {
     flex-direction: column;
   }

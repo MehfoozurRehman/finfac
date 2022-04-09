@@ -56,6 +56,7 @@ export default function GuideScreen() {
         <CalculatorCard
           icon={autoLoan}
           iconActive={autoLoanActive}
+          path="/credit-card-calculator"
           name="Credit Card EMI Calculator"
         />
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import contactPic from "../assets/contactPic.svg";
+import PaymentsChart from "../components/PaymentsChart";
 import RangeSlider from "../components/RangeSlider";
 
 function AmortizationCardEntry() {
@@ -79,7 +80,20 @@ export default function HomeLoanCalculator() {
                 </div>
               </div>
             </div>
-            <div className="car__loan__calculator__graph__card"></div>
+            <div className="car__loan__calculator__graph__card">
+              <PaymentsChart />
+              <div className="car__loan__calculator__graph__card__entry__wrapper">
+                <div className="car__loan__calculator__graph__card__entry">
+                  <span>Principal Amt</span>3,00,000
+                </div>
+                <div className="car__loan__calculator__graph__card__entry">
+                  <span>Interest Amt</span>24,00,000
+                </div>
+                <div className="car__loan__calculator__graph__card__entry">
+                  <span>Total Amt Payble</span>241,00,000
+                </div>
+              </div>
+            </div>
           </div>
           <div className="calulator__section__content__botttom">
             <div className="calulator__section__content__botttom__heading">

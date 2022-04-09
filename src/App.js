@@ -21,6 +21,7 @@ import CompareMorePopup from "./components/CompareMorePopup";
 import CarLoanCalculator from "./screens/CarLoanCalculator";
 import SIPCalculator from "./screens/SIPCalculator";
 import HomeLoanCalculator from "./screens/HomeLoanCalculator";
+import CreditCardCalculator from "./screens/CreditCardCalculator";
 
 export default function App() {
   const [creditCardPopup, setCreditCardPopup] = useState(false);
@@ -80,6 +81,10 @@ export default function App() {
         <Route path="/car-loan-calculator" element={<CarLoanCalculator />} />
         <Route path="/sip-calculator" element={<SIPCalculator />} />
         <Route path="/home-loan-calculator" element={<HomeLoanCalculator />} />
+        <Route
+          path="/credit-card-calculator"
+          element={<CreditCardCalculator />}
+        />
       </Routes>
       <Footer />
     </div>
