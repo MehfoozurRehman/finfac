@@ -1,23 +1,33 @@
 import React from "react";
 import contactPic from "../assets/contactPic.svg";
+import PopupRadioButton from "../components/PopupRadioButton";
 import RangeSlider from "../components/RangeSlider";
+import Toggle from "react-toggle";
 
-export default function CarLoanCalculator() {
+export default function SIPCalculator() {
+  const listOfEntries = [
+    {
+      name: "I Know My Goal",
+      default: true,
+    },
+    {
+      name: "I Want to Invest",
+      default: false,
+    },
+  ];
   return (
     <>
       <div className="calculator__container">
         <div className="calculator__container__left">
           <div className="calculator__container__left__heading">
-            Car Loan EMI Calculator
+            SIP Calculator
           </div>
           <div className="calculator__container__left__para">
-            Car has become a basic necessity and it is one of the earliest
-            purchases you will ever make. For millennials, car is like a status
-            symbol and adds to the standard of living. The best way to buy a car
-            is from your savings. However, even if you cannot buy with your
-            savings, you can still afford it with easy and simple car loans
-            where you are free from the stress of paying the lump sum amount at
-            once, instead pay with easy every month with the EMI facility
+            SIP stands for systematic Investment Plan, which is a systematic way
+            of investing a fixed amount in a predetermined scheme of mutual fund
+            at a fixed interval. SIP is a attern/style of investment not a
+            scheme/fund or a stock. It is a method to invest periodically in a
+            scheme of your choice
           </div>
         </div>
         <img
@@ -28,38 +38,47 @@ export default function CarLoanCalculator() {
       </div>
       <div className="calculator__section">
         <div className="calculator__section__content">
-          <div className="car__loan__calculator__content__card">
-            <div className="car__loan__calculator__content__card__left">
+          <div className="sip__calculator__content__card">
+            <div className="sip__calculator__content__card__left">
+              <div className="sip__calculator__content__card__toggle__row">
+                {listOfEntries.map((item, i) => (
+                  <div key={i} className="main__content__form__col">
+                    <label className="main__content__form__toggle">
+                      <span>{item.name}</span>
+                      <Toggle defaultChecked={item.default} icons={false} />
+                    </label>
+                  </div>
+                ))}
+              </div>
               <RangeSlider
-                title="Loan Amount ($)"
+                title="I need Rs."
                 value="26200"
-                minRange="1 Lac"
-                maxRange="1 Cr"
+                minRange="5 Lac"
+                maxRange="5 Cr"
               />
               <RangeSlider
-                title="Interest Rate (p.a)"
+                title="No. of years"
                 value="10.5%"
                 minRange="7%"
                 maxRange="10.5%"
               />
               <RangeSlider
-                title="Tenure (years)"
+                title="Expected of Return"
                 value="3"
                 minRange="1"
                 maxRange="8"
               />
             </div>
-            <div className="car__loan__calculator__content__card__right">
-              <div className="car__loan__calculator__content__card__right__banner">
-                Equated Monthly Installments (EMI) 85,156
+            <div className="sip__calculator__content__card__right">
+              <div className="sip__calculator__content__card__right__banner">
+                Monthly SIP Amount $505
               </div>
             </div>
           </div>
-          <div className="car__loan__calculator__graph__card"></div>
         </div>
       </div>
       <div className="calculator__container__content">
-        <div className="calculator__container__heading">Car Loan Overview:</div>
+        <div className="calculator__container__heading">What is a SIP?</div>
         <div className="calculator__container__para">
           Car has become a basic necessity and it is one of the earliest
           purchases you will ever make. For millennials, car is like a status
@@ -99,7 +118,7 @@ export default function CarLoanCalculator() {
           payment for the borrower through EMIs.
         </div>
         <div className="calculator__container__heading">
-          What is Car Loan EMI?
+          What is SIP Calculator?
         </div>
         <div className="calculator__container__para">
           EMI stand for “Equated Monthly Installment” towards the Car Loan taken
@@ -139,7 +158,7 @@ export default function CarLoanCalculator() {
         <li className="calculator__container__para">HUFs and Trus</li>
 
         <div className="calculator__container__heading">
-          What is Car Loan EMI?
+          What is SIP Calculator?
         </div>
         <div className="calculator__container__para">
           EMI stand for “Equated Monthly Installment” towards the Car Loan taken
@@ -160,7 +179,7 @@ export default function CarLoanCalculator() {
           simpler and easier.
         </div>
         <div className="calculator__container__heading">
-          3 most important components of Car Loan EMI:
+          3 most important components of SIP:
         </div>
         <div className="calculator__container__para">
           <span>Principal</span> – Principal is the amount of loan that the
@@ -181,7 +200,7 @@ export default function CarLoanCalculator() {
           payment for the borrower through EMIs.
         </div>
         <div className="calculator__container__heading">
-          What is Car Loan EMI?
+          What is SIP Calculator?
         </div>
         <div className="calculator__container__para">
           EMI stand for “Equated Monthly Installment” towards the Car Loan taken

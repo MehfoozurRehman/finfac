@@ -44,6 +44,7 @@ export default function GuideScreen() {
         <CalculatorCard
           icon={autoLoan}
           iconActive={autoLoanActive}
+          path="/sip-calculator"
           name="SIP Calculator"
         />
         <CalculatorCard
